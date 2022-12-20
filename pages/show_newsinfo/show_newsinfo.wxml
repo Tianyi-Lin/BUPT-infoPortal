@@ -1,0 +1,33 @@
+<!-- 导入substr.wxs -->
+<wxs src="/utils/stringtool.wxs" module="stringtool" />
+
+<!-- <cu-custom bgColor='bg-wegreen' isBack="{{true}}">
+  <view slot="backText">
+    返回
+  </view>
+  <view slot="content">
+    通知详情
+  </view>
+</cu-custom> -->
+
+<cu-custom bgColor='bg-gradual-green' isCustom="{{true}}">
+  <view slot="backText">
+  </view>
+  <!-- 避免author过长，通知由多个部门发出时 -->
+  <view wx:if="{{current_news_author.length < 9}}" slot="content">
+    {{current_news_author}}          
+  </view>
+  <view wx:else="" slot="content">
+    {{stringtool.strSlice(current_news_author,0,9)}}
+  </view>
+  <!-- <view slot="content">
+    {{current_news_author}}
+  </view> -->
+</cu-custom>
+
+
+<!-- 采用wxparse -->
+<import src="../../wxParse/wxParse.wxml"/>
+<view>
+  <template is="wxParse" data="{{wxParseData:htmlstr.nodes}}"></template>
+</view>

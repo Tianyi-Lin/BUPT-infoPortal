@@ -1,0 +1,53 @@
+page {
+  background-color: white;
+}
+
+.topMargin{
+  display: flex;
+  flex-direction: column;
+  padding-top: 70rpx;
+  justify-content: center;
+  align-items: center;
+}
+
+.tower-swiper .tower-item {
+  transform: scale(calc(0.5 + var(--index) / 10));
+  margin-left: calc(var(--left) * 100rpx - 150rpx);
+  z-index: var(--index);
+}
+
+.page {
+  height: 100Vh;
+  width: 100vw;
+}
+
+.page.show {
+  overflow: hidden;
+}
+
+.switch-sex::after {
+  content: "\e716";
+}
+
+.switch-sex::before {
+  content: "\e7a9";
+}
+
+.switch-music::after {
+  content: "\e66a";
+}
+
+.switch-music::before {
+  content: "\e6db";
+}
+
+.imagesize {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagesize image {
+  width: 80rpx;
+  height: 80rpx;
+}

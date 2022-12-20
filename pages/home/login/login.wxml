@@ -1,0 +1,32 @@
+<!-- 调用colorui -->
+<cu-custom bgColor="bg-gradual-orange" isCustom="{{true}}"><view slot="backText">返回</view><view slot="content">登录</view></cu-custom>
+
+<view class="UCenter-bg">
+  <image src="https://s3.uuu.ovh/imgs/2022/12/07/12d232dcb56ee829.gif" mode="scaleToFill" class="gif-wave"></image>
+</view>
+
+<view style="margin-top: 75rpx;">
+</view>
+
+<view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg bg-gray radius">
+  <view class="account_area">
+      <image src="/images/icons/icons8-user-94.png" style="height: 50rpx; width: 50rpx; margin-left: 20rpx;"></image>
+      <text class="text-grey text-bold" style="margin-left: 10rpx;">账号</text>
+      <input type="number" class="text-grey text-bold" style="margin-left: 10rpx;" cursor-spacing="30" id="userid" maxlength="10" placeholder="10位学号" bindinput="useridInput" confirm-type="next" />
+  </view>
+
+  <view class="code_area">
+    <image src="/images/icons/icons8-lock-94.png" style="height: 50rpx; width: 50rpx; margin-left: 20rpx;"></image>
+    <text class="text-grey text-bold" style="margin-left: 10rpx;">密码</text>
+    <input password="true" class="text-grey text-bold" style="margin-left: 10rpx;" cursor-spacing="30" id="passwd" placeholder="在此处输入密码" bindinput="passwdInput" confirm-type="next" />
+  </view>
+
+  <view class="register_area">
+    <text class="text-blue text-bold" style="margin-left: 30rpx;" bindtap="goto_register">注册</text>
+    <text class="text-blue text-bold" style="margin-right: 30rpx;" bindtap="goto_resetCode">修改/忘记密码</text>
+  </view>
+</view>
+
+<button class="cu-btn bg-green lg flex padding justify-center" bindtap="goto_login">
+   <text>登录</text>
+</button>

@@ -1,0 +1,60 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/search/search",
+    "pages/show_newsinfo/show_newsinfo",
+    "pages/search/result/result",
+    "pages/search/newstagresult/newstagresult",
+    "pages/home/home",
+    "pages/home/about/about",
+    "pages/home/setting/setting",
+    "pages/home/login/login",
+    "pages/home/register/register",
+    "pages/home/check_auth_email/check_auth_email",
+    "pages/home/resetpasswd/resetpasswd"
+  ],
+  
+  "window": {
+    "navigationStyle": "custom",
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#f3f6e3",
+    "navigationBarTitleText": "infoPortal",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#ffffff"
+  },
+  "usingComponents": {
+    "cu-custom":"/colorui/components/cu-custom"
+  },
+
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#60D6F4",
+    "borderStyle":"black",
+    "backgroundColor": "#ffffee",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "News",
+        "iconPath": "/images/icons/icons8-news-grey-94.png",
+        "selectedIconPath": "/images/icons/icons8-news-94.png"
+      },
+      {
+        "pagePath": "pages/search/search",
+        "text": "Search",
+        "iconPath": "/images/icons/icons8-search-grey-94.png",
+        "selectedIconPath": "/images/icons/icons8-search-94.png"
+      },
+      {
+        "pagePath": "pages/home/home",
+        "text": "Home",
+        "iconPath": "/images/icons/icons8-home-grey-94.png",
+        "selectedIconPath": "/images/icons/icons8-home-94.png"
+      }
+    ]
+  },  
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

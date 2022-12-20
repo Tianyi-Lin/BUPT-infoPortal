@@ -1,0 +1,5 @@
+/* pages/home/setting/setting.wxss */
+
+page {
+  background-color: white;
+}

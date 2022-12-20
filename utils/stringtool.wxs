@@ -1,0 +1,13 @@
+// substr.wxs用于截取字符串
+
+function strSlice (str, a, b) {
+  var slicestr = str.slice(a, b);
+  // 省略号
+  var dots = '···';
+  slicestr = slicestr + dots
+  return slicestr
+}
+
+module.exports = {
+  strSlice: strSlice
+};

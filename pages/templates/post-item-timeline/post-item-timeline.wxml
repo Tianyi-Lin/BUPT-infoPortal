@@ -1,0 +1,41 @@
+<!-- 导入substr.wxs -->
+<wxs src="/utils/stringtool.wxs" module="stringtool" />
+
+<template name="postItem-timeline">
+  <!-- 卡片形式的postItem -->
+  <view class="cu-card article is-card">
+    <view class="cu-item shadow">
+      <!-- 标题 -->
+      <view class="title">
+        <view class="text-content">
+          <text>{{news_title}}</text>
+        </view>
+      </view>
+      <!-- 分割线 -->
+      <view class="view_fengexian">
+        <view ></view>
+        <text class="text_fengexian">摘要</text>
+        <view ></view>
+      </view>
+      <!-- 简介 -->
+      <view class="content">
+          <view class="text-content">
+            <text>{{news_brief}}</text>
+          </view>
+      </view>
+      <!-- 发信单位 -->
+      <!-- 时间线item模板中的发信时间在时间线上，所以不进行显示 -->
+      <view class="content">
+        <!-- 避免author过长，通知由多个部门发出时 -->
+        <view wx:if="{{news_author.length < 18}}">
+          <image class="font_author" src="/images/icons/icons8-author-94.png"></image>
+          <text class="cu-tag bg-red light round">{{news_author}}</text>
+        </view>
+        <view wx:else="">
+          <image class="font_author" src="/images/icons/icons8-author-94.png"></image>
+          <text class="cu-tag bg-red light round">{{stringtool.strSlice(news_author,0,18)}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

@@ -1,0 +1,106 @@
+page {
+  background-color: white;
+}
+
+.UCenter-bg {
+  background-image: url(https://s3.uuu.ovh/imgs/2022/12/07/a57cfc62ddd55f16.png);
+  background-size: cover;
+  height: 700rpx;
+  display: flex;
+  justify-content: center;
+  padding-top: 40rpx;
+  overflow: hidden;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  font-weight: 300;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  border-color: #fff;
+}
+
+.UCenter-bg text {
+  opacity: 0.8;
+}
+
+.UCenter-bg image {
+  width: 150rpx;
+  height: 150rpx;
+}
+
+.UCenter-bg .gif-wave{
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  mix-blend-mode: screen;  
+  height: 100rpx;   
+}
+
+/* logo_area的css */
+.logo_area {
+  margin-top: 140rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* . iconimg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.iconimg image {
+  width: 60rpx;
+  height: 60rpx;
+} */
+
+map,.mapBox{
+  left: 0;
+  z-index: 99;
+  mix-blend-mode: screen;  
+  height: 100rpx;   
+}
+
+map,.mapBox{
+  width: 750rpx;
+  height: 300rpx;
+}
+
+.logotext-l {
+  font-size: 34rpx;
+  color-adjust: economy;
+  font-weight: 700;
+  color: white;
+  margin-top: 5rpx;
+}
+
+.logotext-s {
+  font-size: 28rpx;
+  color-adjust: economy;
+  color: white;
+  font-weight: 500;
+}
+
+.account_area {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  height: 100rpx;
+}
+
+.code_area {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  height: 100rpx;
+}
+
+.register_area {
+  height: 75rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

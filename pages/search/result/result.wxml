@@ -1,0 +1,58 @@
+<!-- 需要注意路径，正确导入模板 -->
+<import src="/pages/templates/post-item/post-item.wxml" />
+<import src="/pages/templates/post-item-timeline/post-item-timeline.wxml" />
+
+<cu-custom bgColor="bg-gradual-blue" isCustom="{{true}}">
+  <view slot="backText">
+  </view>
+  <view slot="content">
+    <!-- <text class="cuIcon-searchlist text-white" style="font-weight: 300;"></text>
+    <text style="font-weight: 300;">{{searchkeyword}}相关结果共{{total}}条</text> -->
+    <text>搜索结果</text>
+  </view>
+</cu-custom>
+
+<view class="cu-bar bg-white margin-top">
+  <view class="action">
+    <text class="cuIcon-communityfill text-blue" user-select="false"></text>
+    关键词"{{searchkeyword}}"相关结果共{{total}}条
+  </view>
+</view>
+
+<!-- <block wx:for="{{posts}}" wx:for-item="item" wx:for-index="idx">
+  <view catchtap="onPostTap" data-URL="{{item.news_url}}" data-news_html="{{item.news_html}}" data-id="{{item.news_id}}">
+    <template is="postItem" data="{{...item,date:date}}"/>
+  </view>
+</block> -->
+
+
+<block wx:for="{{posts}}" wx:key="unique" wx:for-item="item" wx:for-index="idx">
+  <!-- <view catchtap="onPostTap" data-URL="{{item.news_url}}" data-news_html="{{item.news_html}}" data-id="{{item.news_id}}">
+    <template is="postItem" data="{{...item,date:date}}"></template>
+  </view> -->
+
+  <!-- 时间线开启 -->
+  <view wx:if="{{timelineOnOff}}" class="cu-timeline">
+    <view >
+      <!-- <view class="cu-time">{{item.news_time}}</view> -->
+      <view>
+        <image class="font_time" src="/images/icons/icons8-clock-94.png"></image>
+        <text class="cu-tag bg-green light round">{{item.news_time}}</text>
+      </view>
+    </view>
+    <!-- <view class="cu-item"> -->
+    <view class="cu-item cur cuIcon-news">
+      <view catchtap="onPostTap" data-URL="{{item.news_url}}" data-news_html="{{item.news_html}}" data-id="{{item.news_id}}" data-news_author="{{item.news_author}}">
+        <!-- 使用时间线的item模板 -->
+        <template is="postItem-timeline" data="{{...item,date:date}}"></template>
+      </view>
+    </view>
+  </view>
+  <!-- 不使用时间线 -->
+  <view wx:else>
+    <view catchtap="onPostTap" data-URL="{{item.news_url}}" data-news_html="{{item.news_html}}" data-id="{{item.news_id}}" data-news_author="{{item.news_author}}">
+      <template is="postItem" data="{{...item,date:date}}"></template>
+    </view>
+  </view>
+
+</block>

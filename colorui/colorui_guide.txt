@@ -1,0 +1,1 @@
+main.wxss定义了大部分ui组件的wxss

@@ -1,0 +1,66 @@
+<!-- 调用colorui -->
+<cu-custom bgColor="bg-gradual-orange" isCustom="{{true}}"><view slot="backText">返回</view><view slot="content">注册</view></cu-custom>
+
+<view class="UCenter-bg">
+  <image src="https://s3.uuu.ovh/imgs/2022/12/07/12d232dcb56ee829.gif" mode="scaleToFill" class="gif-wave"></image>
+</view>
+
+<view style="margin-top: 75rpx;">
+</view>
+
+<!-- 验证邮件未发送到用户教育邮箱 -->
+<view wx:if="{{!validEmail_tag}}">
+  <view class="cu-list menu card-menu margin-top-l margin-bottom-xl shadow-lg bg-gray radius">
+    <view class="email_area">
+        <image src="/images/icons/icons8-gmail-logo-94.png" style="height: 50rpx; width: 50rpx; margin-left: 20rpx;"></image>
+        <input type="text" class="text-grey text-bold" style="margin-left: 10rpx;" cursor-spacing="30" placeholder="请输入你的北邮教育邮箱" bindinput="set_email_addr" confirm-type="done" />
+    </view>
+    <view class="email_example">
+        <text class="text-blue text-bold">
+          e.g. (ﾟ∀ﾟ)loveslife@bupt.edu.cn
+        </text>
+      <text class="text-blue text-bold">
+        并根据收到的验证邮件进行下一步操作
+      </text>
+    </view>
+  </view>
+  <button class="cu-btn bg-green lg flex padding justify-center" bindtap="valid_email_addr">
+    <text>验证北邮教育邮箱</text>
+  </button>
+</view>
+
+<!-- 验证邮件已发送到教育邮箱，进行下一步注册 -->
+<view wx:if="{{validEmail_tag}}">
+  <view class="cu-list menu card-menu margin-top-l margin-bottom-l shadow-lg bg-gray radius">
+    <view class="email_area">
+        <text class="text-grey text-bold" style="margin-left: 20rpx;" >姓名</text>
+        <input type="text" class="text-grey text-bold" style="margin-left: 10rpx;" cursor-spacing="30" maxlength="10" placeholder="请输入您的姓名" bindinput="set_username" confirm-type="done" />
+    </view>
+    <view class="email_area">
+        <text class="text-grey text-bold" style="margin-left: 20rpx;" >学号</text>
+        <input type="number" class="text-grey text-bold" style="margin-left: 10rpx;" cursor-spacing="30" maxlength="10" placeholder="请输入您的学号" bindinput="set_studentnumber" confirm-type="done" />
+    </view>
+    <view class="email_area">
+        <text class="text-grey text-bold" style="margin-left: 20rpx;" >用户密码</text>
+        <input type="text" password="true" class="text-grey text-bold" style="margin-left: 10rpx;" cursor-spacing="30" placeholder="至少8位含数字和字母" bindinput="set_usercode"  confirm-type="done" />
+    </view>
+    <view class="email_area">
+        <text class="text-grey text-bold" style="margin-left: 20rpx;" >确认密码</text>
+        <input type="text" password="true" class="text-grey text-bold" style="margin-left: 10rpx;" cursor-spacing="30" placeholder="请再输入一遍密码" bindinput="set_usercode_repeat" confirm-type="done" />
+    </view>
+    <view class="email_area">
+        <text class="text-grey text-bold" style="margin-left: 20rpx;" >验证码</text>
+        <input type="number" class="text-grey text-bold" style="margin-left: 10rpx;" cursor-spacing="30" placeholder="根据验证邮件填写验证码" bindinput="set_verification_code" confirm-type="done" />
+    </view>
+    <view style="margin-left: 20rpx; margin-right: 20rpx; margin-bottom: 20rpx;">
+      <text class="text-blue text-bold" >
+      温馨提示：在输入密码时，请避免使用您的常用密码，以免带来不必要的风险！
+      </text>
+    </view>
+  </view>
+
+  <button class="cu-btn bg-green lg flex padding justify-center" bindtap="activate_account" style="margin-top: 50rpx;">
+    <text>点击激活账号</text>
+  </button>
+</view>
+

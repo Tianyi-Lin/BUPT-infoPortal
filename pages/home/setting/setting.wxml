@@ -1,0 +1,34 @@
+<cu-custom bgColor="bg-gradual-orange" isCustom="{{true}}">
+  <view slot="content">
+    <text>设置</text>
+  </view>
+</cu-custom>
+
+<view class="cu-bar bg-white">
+  <view class="action">
+    <text class="cuIcon-repairfill text-orange"></text>
+    <text>在本页对小程序进行设置</text>
+  </view>
+</view>
+
+<view class="cu-list menu text-left solid-top bg-gray">
+  <view class="cu-item">
+    <view class="content">
+      <text class="text-black">时间线（全局有效）</text>
+    </view>
+    <view class="action">
+      <!-- checked是默认打开或者关闭 -->
+      <switch bindchange="timelineSwitch" checked="{{timeline_switch_state}}"></switch>
+    </view>
+  </view>
+
+  <view class="cu-item">
+    <view class="content">
+      <text class="text-black">敬请期待</text>
+    </view>
+    <view class="action">
+      <!-- checked是默认打开或者关闭 -->
+      <switch bindchange="not_developed_setting" checked="true"></switch>
+    </view>
+  </view>
+</view>

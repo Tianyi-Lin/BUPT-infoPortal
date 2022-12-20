@@ -1,0 +1,10 @@
+/* pages/search/result/result.wxss */
+@import "../../templates/post-item/post-item.wxss";
+
+page {
+  background-color: white;
+}
+
+.font_time {
+  margin-left: 43rpx;
+}

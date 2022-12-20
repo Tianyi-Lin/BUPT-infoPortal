@@ -1,0 +1,11 @@
+<cu-custom bgColor="bg-gradual-orange" isCustom="{{true}}"><view slot="backText">返回</view><view slot="content">关于</view></cu-custom>
+<view class='margin-xl bg-white padding-xl radius shadow-lg'>
+  <view class='text-center margin-bottom text-lg  text-grey'>关于BUPT infoPortal</view>
+  <view class='text-content'>
+    <view>Hi！欢迎使用BUPT infoPortal小程序！</view>
+    <view class='margin-top-sm'>BUPT infoPortal是一个面向北邮在校学生开发的信息门户平台。用户在其中可以方便地浏览、搜索、分类查看通知。</view>
+    <view class='margin-top-sm'>由于本项目使用群体的限定性，在注册和登录时需要使用学号和教育邮箱等信息，敬请谅解~ 若在使用过程中出现bug或有一些好的想法，你可以在Home页的反馈里提交给我~</view>
+    <view class='margin-top-sm'>鸣谢：本项目前端基于ColorUI开源项目开发(https://docs.xzeu.com/#/)，原作者：weilanwl；并使用wxparse(https://github.com/icindy/wxParse)渲染爬虫获取的html代码，原作者icindy，在此感谢两位作者大大٩(๑❛ᴗ❛๑)۶ ！， 此外，本项目在作者本科课设基础上优化而来，感谢与我一路同行的队友小伙伴szechung帮助。</view>
+    <view class='margin-top-sm'>更多功能敬请期待！</view>
+  </view>
+</view>

@@ -1,0 +1,36 @@
+<!--pages/home/resetpasswd/resetpasswd.wxml-->
+<!-- <text>pages/home/resetpasswd/resetpasswd.wxml</text> -->
+
+<!-- 调用colorui -->
+<cu-custom bgColor="bg-gradual-orange" isCustom="{{true}}"><view slot="backText">返回</view><view slot="content">修改/忘记密码</view></cu-custom>
+
+<view class="UCenter-bg">
+  <image src="https://s3.uuu.ovh/imgs/2022/12/07/12d232dcb56ee829.gif" mode="scaleToFill" class="gif-wave"></image>
+</view>
+
+<view style="margin-top: 75rpx;">
+</view>
+
+<view class="cu-list menu card-menu margin-top-l margin-bottom-xl shadow-lg bg-gray radius">
+  <view class="email_area">
+      <text class="text-grey text-bold" style="margin-left: 20rpx;" >学号</text>
+      <input type="number" class="text-grey text-bold" style="margin-left: 10rpx;" cursor-spacing="30" maxlength="10" placeholder="请输入您的学号" bindinput="set_userid" confirm-type="done" />
+  </view>
+  <view class="email_area">
+      <text class="text-grey text-bold" style="margin-left: 20rpx;" >用户密码</text>
+      <input type="text" password="true" class="text-grey text-bold" style="margin-left: 10rpx;" cursor-spacing="30" placeholder="至少8位含数字和字母" bindinput="set_newpasswd"  confirm-type="done" />
+  </view>
+  <view class="email_area">
+      <text class="text-grey text-bold" style="margin-left: 20rpx;" >确认密码</text>
+      <input type="text" password="true" class="text-grey text-bold" style="margin-left: 10rpx;" cursor-spacing="30" placeholder="请再输入一遍密码" bindinput="set_newpasswd_repeat" confirm-type="done" />
+  </view>
+  <view style="margin-left: 20rpx; margin-right: 20rpx; margin-bottom: 20rpx;">
+    <text class="text-blue text-bold" >
+    温馨提示：在输入密码时，请避免使用您的常用密码，以免带来不必要的风险！重置密码后将退出登录状态，需要重新使用新密码登录!
+    </text>
+  </view>
+</view>
+
+<button class="cu-btn bg-green lg flex padding justify-center" bindtap="reset_passwd" style="margin-top: 50rpx;">
+  <text>点击重置密码</text>
+</button>
